@@ -113,4 +113,7 @@ DIA-NRO          ACTIVIDAD           DIA
     PLAN A CORTO PLAZO: Es el planificador que gestiona los movimientos de la lista de procesos listos al CPU.
 
 3)
-    Buffering: 
+    Buffering: Permite la ejecución de un proceso en simultaneo con su E/S
+    Spooling: Permite la ejecución de un proceso en simultaneo con la ejecución de otro proceso
+    Operación online: Refiere al uso de discos
+    Monitor residente: Permite automatizar los procesos secuencialmente
