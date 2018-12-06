@@ -1,0 +1,110 @@
+
+                                                /**                                                               **\
+                                                *   RESPUESTAS ALTERNATIVAS A LOS FINALES DE SISTEMAS OPERATIVOS    *
+                                                \**                                                               **/
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- F1 Febrero 2008 -                                                                                                                                   - CANT - 3 de 5 - 
+- - - - - - - - - -                                                                                                                                   - - - - - - - - -
+
+1) 
+    - La respuesta es NO (Los sistemas puros de Tiempo Real NO utilizan memoria virtual), esto se debe a que los sist en tiempo real se caracterizan por 
+    la rápida respuesta al usuario (cumplen con los límites definidos), y la memoria virtual tiene una cualidad que genera incertidumbre en cuanto al 
+    tiempo que requerirá una operación, por los que ambos son incompatibles.
+    
+
+    - Los sist puros en tiempo real NO utilizan memoria virtual ya que la memoria virtual tiende a generar incertidumbre en cuanto al tiempo que 
+    una acción va a requerir, y los sist en tiempo real DEBEN dar una rápida respuesta al usuario ya que esta es su característica principal
+
+2)
+    - Un programa es independiente del dispositivo cuando su funcionamiento NO depende de los dispositivos de entrada/salida (E/S), es decir, se puede ejecutar en 
+    diferentes disp de E/S.
+
+5)
+    - El grado de multiprogramación es el número máximo de procesos que pueden estar simultaneamente en la memoria principal.
+    El SO, al administrar los procesos usa planificadores. A corto, mediano y largo Plazo.
+    El Planificador a Mediano Plazo (ONI) es el encargado de gestionar los procesos en memoria. Este puede tanto agregar como quitar procesos 
+    de la memoria. Por lo tanto es el módulo que buscábamos
+
+    EXTRA: "En un entorno muy interactivo existe un tercer nivel del administrador del procesador, conocido como planificador de nivel medio. 
+    En algunos casos, en especial cuando el sistema está sobrecargado, el planificador de nivel medio encuentra ventajoso retirar trabajos activos de la memoria 
+    para reducir el grado de multiprogramación, y por lo tanto, permitir que los trabajos se completen más aprisa"
+
+    EXTRA: Un sistema multiprogramacion es un sist que permite soportar dos o más procesos activos simultaneamente.
+    También, como puedes intuir, permite que residan en memoria las instrucciones y los datos de dos o más procesos.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- F2 Marzo 2008 -                                                                                                                                     - CANT - 3 de 5 - 
+- - - - - - - - -                                                                                                                                     - - - - - - - - -
+
+1) 
+    La FRAGMENTACIÓN EXTERNA existe cuando se presenta una solicitud al SO, y el espacio de memoria es suficiente para atender a una solicitd pero no es contiguo.
+    Es decir, el almacenamiento está fragmentado en varios huecos pequeños.
+    La FRAGMENTACIÓN INTERNA existe cuando en un hueco de memoria un proceso no usa la totalidad de su espacio disponible en ese hueco. La consecuencia es que 
+    el espacio restante queda desperdiciado
+
+2)
+    [IMPROVISADO] En los sist multiprogramacion existen los mecanismos de buffering y spooling. Estos mecanismos podrían permitir que las operaciones de E/S y CPU 
+    se superpongan. Para eso podría ocurrir, por ejemplo en buffering, es que la E/S y el CPU que les toquen sean del mismo proceso.
+    (Medio rebuscado esto quizás)
+
+4) 
+    El Algoritmo de round Robin es un algoritmo que se encarja de gestionar el uso del cpu entre los procesos.
+    Este Algitmo asigna X cant de tiempo a cada proceso, por turno, uno por uno. 
+    Ejemplo: Cola de procesos: proce1, proce2. Ejecucion algoritmo: 10min para proce1, luego 10min para proce2, 10min para proce1, 10min para proce2, ..., fin
+    Q (Quantum) en el Algoritmo de Round Robin es el número máximo de intervalos de tiempo (cant de tiempo) que un proceso puede usar el CPU en su turno, 
+    por lo que si Q tiende a infinito, el proceso dispondrá de infinito tiempo para ejecutarse. La consecuencia negativa de esto es que, si hay más procesos en 
+    la cola, si o si tendrán que esperar a que este proceso con Q tendiente a infinito termine. Si este proceso es muy largo, entonces el bloqueo en el SO 
+    pasaría a afectar severamente al sistema.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- F3 Agost 2009 -                                                                                                                                     - CANT - 4 de 5 - 
+- - - - - - - - -                                                                                                                                     - - - - - - - - -
+
+1) 
+    El término overflow refiere a un desbordamiento de datos, los cuales pueden ser perdidos.
+    Este desbordamiento puede ser 
+        . Aritmético
+        - De pila (stackoverflow): Un programa hace demasiadas llamadas a subrutinas, las cuales van a una pila, y sucede que esta pila no tiene más espacio y desborda.
+        - De buffer (buffer overflow): El tamaño de los datos que entran al buffer superan su tamaño, resultando en pérdida de información
+
+2)
+    Un sist en tiempo real se caracteríza por generar respuestas inmediatas para el usuario.
+    Tener toda la info en linea supone tenerla instantanea para el usuario, por lo que conviene completamente.
+    La consecuencia de que esto no sea así es demoras en generar respuestas para el usuario, hecho que va en contra de lo que define a un sist en tiempo real.
+    EXTRA: Al tener toda la info en linea la mayor parte de los procesos residen en memoria y la interacción entre memoria principal y secundaria es muy baja.
+
+3)
+    Las Colas Cíclicas Realimentadas tienen como característica principal permitir mover un proceso de una cola a otra (algo que NO es posible en Colas Cíclicas comunes).
+    La idea detrás de esto es priorizar en función de sus ráfagas de CPU (si un proceso usa demasiado tiempo de CPU, se lo pasa a una cola de prioridad baja).
+    Esto optimiza la gestión del CPU, permitiendo que los procesos NO tengan que esperar mucho a ser atendidos.
+
+5)
+    El ratio de paginación es la frecuencia con las que ocurre que a un acceso a la memoria NO se le asigna algo que está en la RAM. Por lo cual pasa a suceder 
+    que la RAM tiene que buscar ese algo en el SWAP (que está en el HDD), por lo que se produce un viaje de ida y uno de vuelta al HDD. Dos consultas muy lentas.
+    Si el ratio de paginación es alto, estas dos consultas lentas repetidas constantemente van a repercutir en un decaimiento de la performance general.
+    Aún así, la caida de la performance no está cien por ciento asegurada ya que depende de algunas otras variables (el tamaño del SWAP, la eficiencia en el uso de memoria de 
+    los programas, la cantidad de programas en ejecución)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+- F4 Dic 2009 -                                                                                                                                       - CANT - 1 de 5 - 
+- - - - - - - -                                                                                                                                       - - - - - - - - -
+
+1)
+    Operacion independiente o fuera de linea (offline): Surge del problema de que el CPU es mucho mas rápido que los disp de E/S,
+    por eso se desaprovecha en gran medida el CPU. Entonces para solucionar esto surge la operación fuera de linea, que consiste en 
+    hacer que el CPU lea de cintas magnéticas (en ves de leer directamente de los disp de E/S). Y entonces los disp de E/S intercambian 
+    sus datos con cintas, en ves de con el CPU. Su funcionamiento es independiente de la CPU. Se dice que operan FUERA DE LINEA
+    
+    Operacion positiva o modo dual, que propone agregar un bit más que habiliten dos modos: modo monitor y modo usuario. Entonces, cuando 
+    ocurre una excepción, el sistema pasa siempre a modo monitor. También cualquier decición importante o contacto con los disp de E/S 
+    suceden en el modo monitor. El sist se pone en modo usuario justo antes de pasar el control a un programa de usuario.
+
+2)
+    PLAN A LARGO PLAZO: Es un planificador que a veces está presente, sobre todo en SOS que permiten además de procesos interactivos, tmb trabajos por lotes.
+    Se ocupa principalmente de mover procesos de una lista de procesos bloqueados o en espera, a una lista de procesos listos para mandar a la CPU.
+    Gestiona esto de manera eficiente para que los procesos listos sean equilibrados tanto en consumo de CPU como en E/S.
+    PLAN A MEDIANO PLAZO: Este está presente en SO's de multiprogramacion y tiempo compartido. Se ocupa de gestionar los movimientos de procesos entre la RAM y 
+    el SWAP. Con esto se aumenta el nro de procesos listos para ser ejecutados, y con esto se aprovecha mas el CPU.
+    PLAN A CORTO PLAZO: Es el planificador que gestiona los movimientos de la lista de procesos listos al CPU.
+    
